@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  display: flex;
+}
+header {
+  position: sticky;
+  background-color: rgba(154, 154, 154, 0.894);
+  top: 0px;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  justify-content: space-between;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgb(153, 153, 153);
+}
+.left {
+  margin: 1rem;
+  font-size: 1.5rem;
+  transform: scale(1.7,1.7);
+  margin-left: 10%;
+}
+.right {
+  margin-right: 10%;
+}
+.right a {
+  color: black;
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+#main-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#container {
+  flex-direction: column;
+  justify-content: center;
+  min-width: 80%;
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#bookshelf {
+  border: 2px rgb(200, 200, 200) solid;
+  box-shadow: 0 0 5px;
+  min-width: 80%;
+  max-width: 80%;
+  min-height: 100vh;
+  padding: 20px;
+}
+.filters {
+  border-right: 2px rgb(206, 206, 206) solid;
+  min-width: 30%;
+  padding: 1.5rem;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.filters div {
+  justify-content: center;
+  text-align: center;
+  border: 1.5px black solid;
+  margin: 0.5rem 0;
+  padding: 4px;
+  box-shadow: 0 0 10px rgb(153, 153, 153);
+}
+
+.filters .active{
+  background-color: rgb(214, 102, 42);
+  color: #fff;
+}
+
+.filters div:hover {
+  background-color: rgb(214, 102, 42);
+  color: #fff;
+  transition: 325ms all;
+}
+.book-container {
+  min-width: 70%;
+  min-height: 150vh;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.search-input {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  border: 1.5px black solid;
+  /* z-index: -1; */
+}
+input {
+  width: 90%;
+  height: auto;
+  font-size: 1.1rem;
+  padding: 1%;
+  margin: 0;
+}
+#search-btn {
+  position: absolute;
+  min-width: 10%;
+  height: 100%;
+}
+.books {
+  display: grid;
+  margin-top: 3%;
+}
+
+.books div {
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(216, 213, 213, 0.571);
+  margin: 10px;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px;
+  overflow: hidden;
+}
+.books div h5 {
+  margin-top: auto;
+}
+.books div img{
+  width: inherit;
+}
+.books div:hover{
+  box-shadow: 1px 1px 7px;
+}
+
+#login-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+
+  height: 100vh;
+  /* background-color: #3c3c3c3c; */
+  align-items: center;
+  justify-content: center;
+    
+  background: rgba(42, 42, 42, 0.12);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+#login-container.active{
+  display: flex;
+}
+
+#logsign-box{
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 50%;
+    border-radius: 10px;
+}
+.choice {
+  width: 100%;
+  height: 13%;
+}
+.swap-btn{
+    width:50%;
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+}
+
+
+.login-form{
+    border-right: 1.5px solid rgba(128, 128, 128, 0.414);
+}
+.signup-form{
+    border-left: 1.5px solid rgba(128, 128, 128, 0.414);
+}
+#login-box,#signup-box{
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top:10vh;
+    padding: 10px;
+}
+#login,#signup{
+    width: 100%;
+    padding: 8px;  
+}
+ul{
+    list-style: none;
+}
+li{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+div form{
+    width: 100%;
+    justify-content: center;
+}
+form li input{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.social-login{
+    justify-content: space-evenly;
+}
+#login-btn{
+    width: 100%;
+    padding: 1%;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+#login-box{
+  display: none;
+}
+#login-box.active{
+  display: flex;
+}
+#signup-box{
+    display: none;
+}
+#signup-box.active{
+    display: flex;
+}
+
+#logsign-box.login {
+  height: 385px;
+}
+
+#logsign-box.signup {
+  height: 480px
+}
+
+.login-form.active{
+  border-bottom: 2px solid grey;
+  box-shadow: 0 0 3px;
+  border-radius: 10px 0 0 0;
+}
+.signup-form.active{
+  border-bottom: 2px solid grey;
+  box-shadow: 0 0 3px;
+  border-radius: 0 10px 0 0;
+}

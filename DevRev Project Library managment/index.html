@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media-query.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">
+        LOGO
+      </div>
+      <div class="right">
+        <a href="#">Home</a>
+        <a href="#">Books</a>
+        <a href="#">Contact</a>
+        <a href="#" id = "logsign-btn">Login</a>
+      </div>
+    </nav>
+  </header>
+  <div id="main-container">
+
+    <div id="container">
+      <h1>Available Books</h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quos. Repudiandae quidem nisi facilis.
+      Voluptatem, nihil quam cumque sit numquam quo, exercitationem repellat aliquid neque vero temporibus voluptatibus
+      aspernatur. Dolore consequatur quo soluta a corrupti eaque accusantium explicabo consequuntur aperiam quia ab
+      temporibus modi odio earum quasi pariatur facilis voluptatem vel, vitae commodi blanditiis velit! Error officia
+      obcaecati numquam. Quod voluptates maiores quis dolore reprehenderit a doloremque sed, fuga magni.
+
+    </div>
+
+    <div id="bookshelf">
+      <div class="filters">
+        <div class="active">ALL BOOKS</div>
+        <div onclick="comsci()">COMPUTER SCIENCE</div>
+        <div onclick="pandp()">PHILOSOPHY & PSYCHOLOGY</div>
+        <div>RELIGION</div>
+        <div>SCIENCE</div>
+        <div>TECHNOLOGY</div>
+        <div>ARTS & RECREATION</div>
+        <div>LITRATURE</div>
+        <div>HISTORY & GEOGRAPHY</div>
+        <div>BUSINESS</div>
+      </div>
+      <div class="book-container">
+        <form class="search-input">
+          <input type="text" id="input" placeholder="Enter the name of book">
+          <button id="search-btn" class="btn" type="submit" onclick="getBooks()">Go</button>
+        </form>   
+        <div class="books">
+          <div>
+           <img src="" alt="fuck">
+           <h5>Title</h5>
+          </div>
+          <div>
+            Book2
+          </div>
+          <div>
+            Book3
+          </div>
+          <div>
+            Book4
+          </div>
+          <div>
+            Book5
+          </div>
+          <div>
+            Book6
+          </div>
+          <div>
+            Book7
+          </div>
+          <div>
+            Book8
+          </div>
+          <div>
+            Book9
+          </div>
+          <div>
+            Book10
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  <div id="login-container" class="">
+    <div id="logsign-box" class= "login">
+      <div class="choice">
+        <button class="swap-btn login-form active">Log In</button>
+        <button class="swap-btn signup-form">Sign Up</button>
+      </div>
+      <div id="login-box" class="active">
+        <div id="login">
+          <form>
+            <ul>
+              <li>
+                <input type="text" placeholder="Username or Email" id="uid" required>
+              </li>
+              <li>
+                <input type="password" placeholder="Password" id="password"required>
+              </li>
+              <li>
+                <button id="login-btn">Login</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <hr>
+        <div class="social-login">
+          <a href="#"><i class="fa-brands fa-google fa-2xl"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        </div>
+
+      </div>
+      <div id="signup-box">
+        <div id="signup">
+          <form>
+            <ul>
+              <li>
+                <input type="text" placeholder="Username" id="password" required>
+              </li>
+              <li>
+                <input type="text" placeholder="Email" id="uid" required>
+              </li>
+              <li>
+                <input type="password" placeholder="Password" id="password" required>
+              </li>
+              <li>
+                <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+              </li>
+              <li>
+                <button id="login-btn">Register</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <hr>
+        <div class="social-login">
+          <a href="#"><i class="fa-brands fa-google fa-2xl"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <script src="app.js"></script>
+  <script src="api.js"></script>
+  <script src="https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&callback=mycallback"></script>
+</body>
+
+</html>
